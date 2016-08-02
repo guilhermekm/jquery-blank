@@ -1,0 +1,132 @@
+<!-- https://api.jquery.com/category/selectors/form-selectors/ -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Category: Form</title>
+
+    <!--<script type="text/javascript>" src="../lib/jquery-3.1.0.js"></script>-->
+    <script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous">
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+          <!-- traga todas os inputs que estao dentro da tag form -->
+          // $('form :input').css({'border-style': 'solid', 'border-color': 'red', 'border-width': '2px' });
+
+          <!-- traga somente elementos de tipo texto -->
+          // $('form :text').css({'border-style': 'solid', 'border-color': 'red', 'border-width': '2px' });
+
+          <!-- traga somente elementos do tipo texto que estao enabled -->
+          // $('form :text:disabled').css({'border-style': 'solid', 'border-color': 'red', 'border-width': '2px' });
+
+          <!-- traga elementos dentro do form que estao checkados -->
+          $('form :checked').css({'border-style': 'solid', 'border-color': 'red', 'border-width': '2px' });
+
+          <!-- -->
+          // $('form :checkbox:checked').css({'border-style': 'solid', 'border-color': 'red', 'border-width': '2px' });
+        });
+    </script>
+
+    <style type="text/css">
+        .style1 {
+            width: 600px;
+        }
+
+        .style2 {
+            width: 200px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>
+        Simples Formulario de Exemplo</h1>
+    <form action="" method="post">
+
+        <table class="style1">
+            <tbody>
+                <tr>
+                    <td class="style2">
+                        Nome: </td>
+                    <td>
+                        <input id="FirstName" type="text" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="style2">
+                        Sobrenome: </td>
+                    <td>
+                        <input id="LastName" type="text" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="style2">
+                        Elemento desabilitado</td>
+                    <td>
+                        <input id="Text1" type="text" disabled="disabled" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="style2">
+                        Sexo: </td>
+                    <td>
+                        <input id="Male" type="radio" checked="checked" />M
+                        <input id="Female" type="radio" />F</td>
+                </tr>
+                <tr>
+                    <td class="style2">
+                        Quais carros voce mais gosta ?</td>
+                    <td>
+                        <input id="Checkbox1" type="checkbox" checked="checked" />
+                        <label for="Checkbox1">Ferrari</label>
+                        <br />
+                        <input id="Checkbox2" type="checkbox" />
+                        <label for="Checkbox1">Lamborghini</label>
+                        <br />
+                        <input id="Checkbox3" type="checkbox" checked="checked" />
+                        <label for="Checkbox1">Masserati</label>
+                        <br />
+                        <input id="Checkbox4" type="checkbox" />
+                        <label for="Checkbox1">Porsche</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="style2">
+                        Comentarios adicionais:</td>
+                    <td>
+                        <textarea id="Comments" cols="40" name="S1" rows="5"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="style2">
+                        Documento com Foto:</td>
+                    <td>
+                        <input id="File1" type="file" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="style2">
+                        &nbsp;</td>
+                    <td>
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="style2">
+                        &nbsp;</td>
+                    <td>
+                        <input id="Submit1" type="submit" value="Enviar" />
+                        <input id="Reset1" type="reset" value="Apagar" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </form>
+
+</body>
+
+</html>

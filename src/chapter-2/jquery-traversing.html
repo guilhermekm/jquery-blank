@@ -1,0 +1,63 @@
+<!-- https://api.jquery.com/category/traversing/ -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Category: Traversing</title>
+
+    <!--<script type="text/javascript>" src="../lib/jquery-3.1.0.js"></script>-->
+    <script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous">
+    </script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+
+        // alert("Existe " + $('p').length + " elementos <p> na pagina HTML");
+        // alert("Existe " + $('p').size() + " elementos <p> na pagina HTML");
+
+        // var elemento = $('li').get();
+        // console.log((elemento).length);
+        // alert("Existe " + elemento.length + " elementos <li>");
+
+        // console.log($('li').get(0));
+
+        // $('ul').find('li.b').css({'border-style': 'solid', 'border-color': 'red', 'border-width': '2px' });
+
+        var leftMargin = 0;
+        var border = 3;
+
+        $('p').each(function(){
+          $(this).css({'border-style': 'solid', 'border-color': 'red', 'border-width': border + "px" });
+          $(this).css("margin-left" , leftMargin);
+          leftMargin+=10;
+          border+=2;
+        });
+
+      });
+    </script>
+
+    <style type="text/css">
+        .style1 {
+            width: 600px;
+        }
+
+        .style2 {
+            width: 200px;
+        }
+    </style>
+
+  </head>
+  <body>
+    <ul id="lista">
+      <li class="a">item 1</li>
+      <li class="a">item 2</li>
+      <li class="b">item 3</li>
+      <li class="b">item 4</li>
+    </ul>
+    <p class="a">This is paragraph 1</p>
+    <p id="para1">This is paragraph 2</p>
+    <p class="b">This is paragraph 3</p>
+    <p id="para2">This is paragraph 4</p>
+
+  </body>
+</html>

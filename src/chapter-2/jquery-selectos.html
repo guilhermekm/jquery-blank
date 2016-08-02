@@ -1,0 +1,67 @@
+<!-- https://api.jquery.com/category/selectors/basic-css-selectors/ -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Category: Selectors</title>
+    <meta charset="utf-8">
+
+    <!--<script type="text/javascript>" src="../lib/jquery-3.1.0.js"></script>-->
+    <script src="https://code.jquery.com/jquery-3.1.0.js"
+            integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk="
+            crossorigin="anonymous">
+    </script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            //$('p').css({'border-style': 'solid', 'border-color': 'red', 'border-width': '2px' });
+
+            //$('.a').css({'border-style': 'solid', 'border-color': 'purple', 'border-width' : '2px' });
+
+            //$('#lista').css({'border-style': 'solid', 'border-color': 'yellow', 'border-width' : '2px' });
+
+            <!-- traga todos os paragrafos com classse b -->
+            //$('p.b').css({'border-style': 'solid', 'border-color': 'gray', 'border-width': '2px'});
+
+            <!-- pegue todos os paragrafos e os li com classe b -->
+            //$('p, li.b').css({'border-style': 'solid', 'border-color': 'gray', 'border-width': '2px'});
+
+            <!-- pegue o li com classe a dentro do ul -->
+            //$('ul li.a').css({ 'border-style': 'solid', 'border-color': 'gray', 'border-width': '2px' });
+
+            <!-- pegue o paragrafo proximo/next ao elemento ul -->
+            //$('ul + p').css({ 'border-style': 'solid', 'border-color': 'gray', 'border-width': '2px' });
+
+            <!-- traga os irmaos proximos do elemento #lista -->
+            $('#lista ~ p').css({ 'border-style': 'solid', 'border-color': 'gray', 'border-width': '2px' });
+        });
+    </script>
+
+    <style type="text/css">
+        .a {
+            color: Red;
+        }
+
+        .b {
+            color: Blue;
+        }
+    </style>
+
+</head>
+
+<body>
+    <ul id="lista">
+        <li class="a">item 1</li>
+        <li class="a">item 2</li>
+        <li class="b">item 3</li>
+        <li class="b">item 4</li>
+    </ul>
+    <p class="a">This is paragraph 1</p>
+    <p>This is paragraph 2</p>
+    <p class="b">This is paragraph 3</p>
+    <p>This is paragraph 4</p>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!-- https://api.jquery.com/category/selectors/basic-filter-selectors/ -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Category: Basic Filter</title>
+
+
+    <!--<script type="text/javascript>" src="../lib/jquery-3.1.0.js"></script>-->
+    <script src="https://code.jquery.com/jquery-3.1.0.js"
+            integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk="
+            crossorigin="anonymous">
+    </script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+
+        // $('p:first').css({'border-style': 'solid', 'border-color': 'red', 'border-width': '2px' });
+
+        // $('p:last').css({'border-style': 'solid', 'border-color': 'red', 'border-width': '2px' });
+
+        <!-- filtra pelos elementos pares -->
+        // $('p:even').css({'border-style': 'solid', 'border-color': 'red', 'border-width': '2px' });
+
+        <!-- filtra pelos elementos impares -->
+        // $('p:odd').css({'border-style': 'solid', 'border-color': 'red', 'border-width': '2px' });
+
+        <!-- filtra pelo primeiro elemento com a classe 'a' -->
+        // $('.a:first').css({'border-style': 'solid', 'border-color': 'red', 'border-width': '2px' });
+
+        <!-- filtra pelo elemento pares com classe 'b' -->
+        // $('.b:even').css({'border-style': 'solid', 'border-color': 'red', 'border-width': '2px' });
+
+        <!-- filtra por paragrafos que tenham indice maior que 1 -->
+        // $('p:gt(1)').css({'border-style': 'solid', 'border-color': 'red', 'border-width': '2px' });
+
+        <!-- filtra todos os paragrafos que nao possuem indice equal a 2 -->
+        $('p:not(p:eq(2))').css({'border-style': 'solid', 'border-color': 'red', 'border-width': '2px' });
+
+      });
+    </script>
+
+    <style type="text/css">
+        .a {
+            color: Red;
+        }
+
+        .b {
+            color: Blue;
+        }
+    </style>
+
+  </head>
+  <body>
+
+    <ul id="lista">
+      <li class="a">item 1</li>
+      <li class="a">item 2</li>
+      <li class="b">item 3</li>
+      <li class="b">item 4</li>
+    </ul>
+    <p class="a">This is paragraph 1</p>
+    <p>This is paragraph 2</p>
+    <p class="b">This is paragraph 3</p>
+    <p>This is paragraph 4</p>
+
+  </body>
+</html>

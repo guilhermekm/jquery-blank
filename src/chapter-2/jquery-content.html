@@ -1,0 +1,60 @@
+<!-- jQuery Content and visibility and child filters -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery Content</title>
+
+    <!--<script type="text/javascript>" src="../lib/jquery-3.1.0.js"></script>-->
+    <script src="https://code.jquery.com/jquery-3.1.0.js"
+            integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk="
+            crossorigin="anonymous">
+    </script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+
+        <!-- traga somente os paragrafos que contem o texto '3' -->
+        $('p:contains(paragraph)').css({'border-style': 'solid', 'border-color': 'red', 'border-width': '2px' });
+
+        <!-- traga QUALQUER elemento que contenha o texto 'item' -->
+        // $(':contains(item)').css({'border-style': 'solid', 'border-color': 'red', 'border-width': '2px' });
+
+        // $('li:parent').css({'border-style': 'solid', 'border-color': 'red', 'border-width': '2px' });
+
+        <!-- traga ul que contem li com classe a -->
+        // $('ul:has(li[class=a])').css({'border-style': 'solid', 'border-color': 'red', 'border-width': '2px' });
+
+        <!-- traga me o terceiro elemento li que esta dentro de ul -->
+        // $('ul li:nth-child(3)').css({'border-style': 'solid', 'border-color': 'red', 'border-width': '2px' });
+
+        // $('ul li:last-child').css({'border-style': 'solid', 'border-color': 'red', 'border-width': '2px' });
+
+        // $('ul li:nth-child(2n)').css({'border-style': 'solid', 'border-color': 'red', 'border-width': '2px' });
+      });
+    </script>
+
+    <style type="text/css">
+        .a {
+            color: Red;
+        }
+
+        .b {
+            color: Blue;
+        }
+    </style>
+
+  </head>
+  <body>
+    <ul id="lista">
+        <li class="a">item 1</li>
+        <li class="a">item 2</li>
+        <li class="b">item 3</li>
+        <li class="b">item 4</li>
+    </ul>
+    <p class="a">This is paragraph 1</p>
+    <p id="para1">This is paragraph 2</p>
+    <p class="b">This is paragraph 3</p>
+    <p>This is paragraph 4</p>
+  </body>
+</html>
